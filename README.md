@@ -1,6 +1,8 @@
-# react-native-popup
+# react-native-dialogbox
 
 This is a custom component for React Native, a simple popup, compatible with ios and android.
+
+>This is a forked distro of react-native-popup that adds support for the current versions of react-native. The originating distro can be found [here](https://github.com/beefe/react-native-popup)
 
 ###Demo
 ![ui](./ui.gif)
@@ -9,68 +11,68 @@ This is a custom component for React Native, a simple popup, compatible with ios
 - <b>isOverlay</b> *bool* - *`default true`*
 - <b>isOverlayClickClose</b> *bool* - *`default true`*
 
-###~~*`static`*~~ Methods
-- <b>alert</b>(<b>`message`</b>: *string*|*number*, [...]) 
+###Methods
+- <b>alert</b>(<b>`message`</b>: *string*|*number*, [...])
 ```javascript
 	e.g.
 
-		this.popup.alert(1);
+		this.dialogbox.alert(1);
 
-		this.popup.alert(1, 'two', '10 messages at most');
+		this.dialogbox.alert(1, 'two', '10 messages at most');
 ```
-- <b>tip</b>({ <b>`title`</b>: *string*, <b>`content`</b>: *string*|*number*|*array*<*string*|*number*> *`isRequired`*, <b>`btn`</b>: {<b>`title`</b>: *string* <b>*`default 'OK'`*</b>, <b>`callback`</b>: *function*}, }) 
+- <b>tip</b>({ <b>`title`</b>: *string*, <b>`content`</b>: *string*|*number*|*array*<*string*|*number*> *`isRequired`*, <b>`btn`</b>: {<b>`title`</b>: *string* <b>*`default 'OK'`*</b>, <b>`callback`</b>: *function*}, })
 ```javascript
 	e.g.
 
-		this.popup.tip({
+		this.dialogbox.tip({
 			content: 'come on!',
 		});
 
-		this.popup.tip({
+		this.dialogbox.tip({
 			title: 'TipTip',
 			content: 'come on!',
 		});
 
-		this.popup.tip({
+		this.dialogbox.tip({
 			content: ['come on!', 'go!'],
 			btn: {
 				text: 'OKOK',
 				callback: () => {
-					this.popup.alert('over!');
+					this.dialogbox.alert('over!');
 				},
 			},
 		});
 ```
-- <b>confirm</b>({ <b>`title`</b>: *string*, <b>`content`</b>: *string*|*number*|*array*<*string*|*number*> *`isRequired`*, <b>`ok`</b>: {<b>`title`</b>: *string* *`default 'OK'`*, <b>`callback`</b>: *function*}, <b>`cancel`</b>: {<b>`title`</b>: *string* *`default 'Cancel'`*, <b>`callback`</b>: *function*}, }) 
+- <b>confirm</b>({ <b>`title`</b>: *string*, <b>`content`</b>: *string*|*number*|*array*<*string*|*number*> *`isRequired`*, <b>`ok`</b>: {<b>`title`</b>: *string* *`default 'OK'`*, <b>`callback`</b>: *function*}, <b>`cancel`</b>: {<b>`title`</b>: *string* *`default 'Cancel'`*, <b>`callback`</b>: *function*}, })
 ```javascript
 	e.g.
 
-		this.popup.confirm({
+		this.dialogbox.confirm({
 			content: 'Are you ready?',
 		});
 
-		this.popup.confirm({
+		this.dialogbox.confirm({
 			content: 'Are you ready?',
 			ok: {
 				callback: () => {
-					this.popup.alert('Very good!');
+					this.dialogbox.alert('Very good!');
 				},
 			},
 		});
 
-		this.popup.confirm({
+		this.dialogbox.confirm({
 			title: 'title',
 			content: ['come on!', 'go!'],
 			ok: {
 				text: 'Y',
 				callback: () => {
-					this.popup.alert('Good!');
+					this.dialogbox.alert('Good!');
 				},
 			},
 			cancel: {
 				text: 'N',
 				callback: () => {
-					this.popup.alert('Hurry up！');
+					this.dialogbox.alert('Hurry up！');
 				},
 			},
 		});
@@ -80,19 +82,21 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ####Step 1 - install
 
 ```
-	npm install react-native-popup --save
+	npm install react-native-dialogbox --save
 ```
 
 ####Step 2 - import and use in project
 
 ```javascript
-import Popup from 'react-native-popup';
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import DialogBox from 'react-native-dialogbox';
 
-class App extends React.Component{
+export default class App extends Component{
 
-	onPressHandle() {
+	onPressHandle = () => {
 		// alert
-		this.popup.alert(1);
+		this.dialogbox.alert(1);
 	},
 
 	render() {
@@ -101,12 +105,12 @@ class App extends React.Component{
 
 				<Text style={styles.btn} onPress={this.onPressHandle}>click me !</Text>
 
-				{/** Popup component */}
-				<Popup ref={(popup) => { this.popup = popup }}/>
+				{/** dialogbox component */}
+				<Popup ref={(dialogbox) => { this.dialogbox = dialogbox }}/>
 
 			</View>
 		);
 	},
-	
+
 };
 ```
