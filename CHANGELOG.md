@@ -1,6 +1,6 @@
 ### HEAD
 
-No changes
+* Updates to readme
 
 ### 0.6.0 (August 19, 2016)
 * Forked from react-native-popup
