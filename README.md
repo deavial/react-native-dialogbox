@@ -1,6 +1,6 @@
 [![npm version](https://img.shields.io/npm/v/react-native-dialogbox.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dialogbox)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-dialogbox.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dialogbox)
-[![Requires.io](https://img.shields.io/requires/github/victoriafrench/victoriafrench.svg?maxAge=2592000)]()
+[![Requirements Status](https://requires.io/github/victoriafrench/react-native-dialogbox/requirements.svg?branch=master)](https://requires.io/github/victoriafrench/react-native-dialogbox/requirements/?branch=master)
 [![React-Native](https://img.shields.io/badge/react--native-v0.30.0-green.svg)]()
 [![platforms](https://img.shields.io/badge/platforms-ios%20%7C%20android-blue.svg)]()
 # react-native-dialogbox
