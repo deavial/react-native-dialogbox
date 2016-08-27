@@ -1,11 +1,26 @@
 {
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "classes": true
+    }
+  },
   "parser": "babel-eslint",
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": [
+    "react"
+  ],
   "env": {
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "es6": true
   },
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "react/jsx-uses-react": 1
+  },
+  "globals": {
+    "WeakMap": true,
+    "__DEV__": true
   }
 }
