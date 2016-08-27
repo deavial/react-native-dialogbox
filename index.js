@@ -233,7 +233,9 @@ export default class DialogBox extends Component{
 	static DisplayPopup = DisplayPopup;
 
 	static propTypes = {
-		name: PropTypes.string
+		name: PropTypes.string,
+		isOverlay: PropTypes.bool,
+		isOverlayClickClose: PropTypes.bool
 	};
 
 	static defaultProps = {
