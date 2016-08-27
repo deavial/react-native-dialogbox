@@ -16,7 +16,14 @@ class PopContent extends Component{
 
 	static propTypes = {
 		title: PropTypes.string,
-		content: PropTypes.oneOfType([ PropTypes.string, PropTypes.number, PropTypes.array, ]),
+		content: PropTypes.oneOfType([
+			PropTypes.string,
+			PropTypes.number,
+			PropTypes.arrayOf(PropTypes.oneOfType({
+				PropTypes.string,
+				PropTypes.number
+			})),
+		]),
 		btns: PropTypes.array,
 	};
 
