@@ -99,7 +99,7 @@ import DialogBox from 'react-native-dialogbox';
 
 export default class App extends Component{
 
-	onPressHandle = () => {
+	handleOnPress = () => {
 		// alert
 		this.dialogbox.alert(1);
 	},
@@ -108,10 +108,10 @@ export default class App extends Component{
 		return (
 			<View style={styles.container}>
 
-				<Text style={styles.btn} onPress={this.onPressHandle}>click me !</Text>
+				<Text style={styles.btn} onPress={this.handleOnPress}>click me !</Text>
 
 				{/** dialogbox component */}
-				<Popup ref={(dialogbox) => { this.dialogbox = dialogbox }}/>
+				<DialogBox ref={(dialogbox) => { this.dialogbox = dialogbox }}/>
 
 			</View>
 		);
