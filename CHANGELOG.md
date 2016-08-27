@@ -16,7 +16,7 @@
 ### 0.6.2 (August 27, 2016)
 * Emergency fix for proptype js exception
 
-### 0.6.1 (August 27, 2016)
+### 0.6.2 (August 27, 2016)
 * Emergency fix for proptype js exception
 
 ### 0.6.1 (August 27, 2016)
