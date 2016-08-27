@@ -26,6 +26,9 @@
 * Emergency fix for proptype js exception
 
 ### 0.6.1 (August 27, 2016)
+* Emergency fix for proptype js exception
+
+### 0.6.1 (August 27, 2016)
 * Updates to readme
 * Updated React 15.2.1 to version 15.3.1
 * Updated React Native 0.31.0 to version 0.32.0
