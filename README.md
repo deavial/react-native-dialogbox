@@ -119,3 +119,53 @@ export default class App extends Component{
 
 };
 ```
+
+###Example working with DialogReferenceManager
+
+###Outer container
+```javascript
+import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
+import DialogBox from 'react-native-dialogbox';
+
+export default class App extends Component {
+	render() {
+		return (
+			<View style={styles.app}>
+				<MyComponent />
+				<DialogBox name="default" />
+			</View>
+		);
+	}
+}
+```
+
+###Sub component
+```javascript
+import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { DialogReferenceManager } from 'react-native-dialogbox';
+
+export default class MyComponent extends Component {
+	handleOnPress = () => {
+		DialogReferenceManager.dialog('default').alert(1);
+	}
+
+	render() {
+		return (
+			<View style={styles.container}>
+				<Text style={styles.btn} onPress={this.handleOnPress}>click me !</Text>
+			</View>
+		)
+	}
+}
+```
+
+DialogReferenceManager allows you to access instances of the DialogBox that exist elsewhere in the render chain. It requires that the name property be set on the DialogBox. Shortcut handlers for `alert`, `tip`, `confirm`, and `close` are available for the component registered as `default` as such:
+
+```javascript
+DialogReferenceManager.alert(1); // only works if a component exists named 'default'
+DialogReferenceManager.dialog('AnyName').alert(1); // allows to access any named dialogbox
+```
+
+This feature was implemented due to the way that absolute positioning works. Users wanted to call a dialogbox in code, but it required the component to be registered at the top of the render chain.
