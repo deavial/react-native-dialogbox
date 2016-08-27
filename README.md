@@ -13,6 +13,7 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ![ui](./ui.gif)
 
 ###Props
+- <b>name</b> *string* - unique name to register component with DialogReferenceManager
 - <b>isOverlay</b> *bool* - *`default true`*
 - <b>isOverlayClickClose</b> *bool* - *`default true`*
 
