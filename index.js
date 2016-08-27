@@ -19,10 +19,10 @@ class PopContent extends Component{
 		content: PropTypes.oneOfType([
 			PropTypes.string,
 			PropTypes.number,
-			PropTypes.arrayOf(PropTypes.oneOfType({
+			PropTypes.arrayOf(PropTypes.oneOfType([
 				PropTypes.string,
 				PropTypes.number
-			})),
+			])),
 		]),
 		btns: PropTypes.array,
 	};
