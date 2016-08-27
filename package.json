@@ -1,9 +1,16 @@
 {
   "name": "react-native-dialogbox",
-  "version": "0.6.4",
-  "description": "dialog popup for react-native",
-  "main": "index.js",
+  "title": "React-Native DialogBox",
+  "version": "0.7.0",
+  "description": "Dialog box component for React-Native",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "jsnext:main": "lib/index.js",
   "scripts": {
+    "prebuild": "eslint lib test",
+    "build": "rollup -c && gulp",
+    "pretest": "npm run build",
+    "prepublish": "npm test",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,6 +18,7 @@
     "url": "git+https://github.com/victoriafrench/react-native-dialogbox.git"
   },
   "keywords": [
+    "react native",
     "react-native",
     "popup",
     "dialog",
@@ -20,6 +28,7 @@
   ],
   "author": {
     "name": "Victoria French",
+    "url": "https://twitter.com/victoriafrench",
     "email": "victoria.french@cinecove.com"
   },
   "engines": {
@@ -30,8 +39,31 @@
     "url": "https://github.com/victoriafrench/react-native-dialogbox/issues"
   },
   "homepage": "https://github.com/victoriafrench/react-native-dialogbox#readme",
-  "peerDependencies": {
+  "dependencies": {
     "react": "~15.4.2",
     "react-native": "^0.41.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-external-helpers": "^6.8.0",
+    "babel-plugin-syntax-flow": "^6.13.0",
+    "babel-plugin-transform-flow-strip-types": "^6.14.0",
+    "babel-preset-es2017": "^6.14.0",
+    "babel-preset-flow": "^1.0.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.14.0",
+    "babelrc-rollup": "^3.0.0",
+    "eslint": "^3.4.0",
+    "flow": "^0.2.3",
+    "gulp": "^3.9.1",
+    "gulp-banner": "^0.1.3",
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-strip-comments": "^2.4.3",
+    "gulp-util": "^3.0.7",
+    "rollup": "^0.34.10",
+    "rollup-plugin-babel": "^2.6.1"
   }
 }

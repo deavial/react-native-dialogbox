@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "6"
+sudo: required
+script:
+  - npm build
+notifications:
+  - victoria.french@cinecove.com
+git:
+  depth:
+    10

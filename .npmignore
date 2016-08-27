@@ -1,0 +1,8 @@
+.jshintignore
+.jshintrc
+.travis.yml
+.mailmap
+.jscs.json
+.gitattributes
+.editorconfig
+/gh-pages

@@ -1,2 +1,12 @@
-.npmignore
+.idea
+.settings
+.project
+.DS_Store
+.sizechache.json
+*.diff
+*.patch
+*.log
+*-dev.*
 node_modules
+coverage
+dist
