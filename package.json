@@ -11,7 +11,7 @@
     "build": "rollup -c && gulp",
     "pretest": "npm run build",
     "prepublish": "npm test",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"\\033[0;35mWARNING:\\033[0m No tests specified\" && exit 0"
   },
   "repository": {
     "type": "git",
