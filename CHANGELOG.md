@@ -2,6 +2,10 @@
 
 * Nothing Current.
 
+### 0.6.4 (February 9, 2017)
+* Updated React peer to 15.4.2
+* Updated React Native peer to 0.41.2
+
 ### 0.6.3 (November 26, 2016)
 * Fix for incorrect flex properties (may alter rendering in your app)
 * Fix for flex-grow components incorrectly using flex
