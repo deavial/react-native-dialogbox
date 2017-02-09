@@ -4,7 +4,8 @@
   "description": "dialog popup for react-native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postpublish": "greenkeeper-postpublish"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,8 @@
   "peerDependencies": {
     "react": "~15.4.2",
     "react-native": "^0.41.2"
+  },
+  "devDependencies": {
+    "greenkeeper-postpublish": "^1.0.1"
   }
 }
