@@ -34,6 +34,18 @@ class PopContent extends Component{
 	render() {
 		let {title, content, btns} = this.props;
 		let btnNumber = btns.length;
+
+		
+		let btnContent = [];
+		btns.forEach((btn, index,) => {
+			btnContent.push(
+				<TouchableOpacity style={styles.btnTextBox} onPress={btn.callback} key={'btnTextBox' + index}>
+					<Text style={styles.btnText}>{btn.text}</Text>
+				</TouchableOpacity>
+			);
+			index != btnNumber - 1 && btnContent.push( <View style={btnNumber > 2 ? styles.line : styles.line } key={'btnLine' + index} /> );
+		});
+		
 		return (
 			<View style={styles.tipBox}>
 				{ title && <View style={styles.tipTitleBox}><Text style={styles.tipTitle}>{title}</Text></View>}
@@ -54,24 +66,15 @@ class PopContent extends Component{
 					})()}
 				</View>
 				<View style={styles.line}></View>
-				<View style={[styles.btnBox, btnNumber > 2 ? {flexDirection: 'column',} : {}]}>
-					{(() => {
-						let btnContent = [];
-						btns.forEach((btn, index,) => {
-							btnContent.push(
-								<TouchableOpacity style={styles.btnTextBox} onPress={btn.callback} key={'btnTextBox' + index}>
-									<Text style={styles.btnText}>{btn.text}</Text>
-								</TouchableOpacity>
-							);
-							index != btnNumber - 1 && btnContent.push( <View style={styles.btnLine} key={'btnLine' + index} /> );
-						});
-						return btnContent;
-					})()}
-				</View>
+
+				{ btnNumber > 2 ? (btnContent) :
+					(<View style={[styles.btnBox, btnNumber > 2 ? {flexDirection: 'column',} : {}]}>
+						{btnContent}
+					</View>)}
+
 			</View>
 		);
 	}
-
 };
 
 class DisplayPopup extends Component{
@@ -312,6 +315,7 @@ let styles = StyleSheet.create({
 		fontSize: 19,
 		fontWeight: '500',
 		textAlign: 'center',
+		color: 'black',
 	},
 	tipContentBox: {
 		flexDirection: 'column',
@@ -324,6 +328,7 @@ let styles = StyleSheet.create({
 		fontSize: 16,
 		marginBottom: 5,
 		textAlign: 'center',
+		color: 'black',
 	},
 	line: {
 		height: 1 / PixelRatio.get(),
