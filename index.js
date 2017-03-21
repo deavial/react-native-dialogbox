@@ -39,8 +39,8 @@ class PopContent extends Component{
 		let btnContent = [];
 		btns.forEach((btn, index,) => {
 			btnContent.push(
-				<TouchableOpacity style={styles.btnTextBox} onPress={btn.callback} key={'btnTextBox' + index}>
-					<Text style={styles.btnText}>{btn.text}</Text>
+				<TouchableOpacity style={[styles.btnTextBox, btnNumber > 2 ? {flexDirection: 'row'} : {}]} onPress={btn.callback} key={'btnTextBox' + index}>
+					<Text style={[styles.btnText, btnNumber > 2 ? {flex: 1} : {}]}>{btn.text}</Text>
 				</TouchableOpacity>
 			);
 			index != btnNumber - 1 && btnContent.push( <View style={btnNumber > 2 ? styles.line : styles.line } key={'btnLine' + index} /> );
