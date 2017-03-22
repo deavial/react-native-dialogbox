@@ -157,6 +157,7 @@ export default class DialogBox extends Component{
 			isVisible: false,
 			isOverlay: this.props.isOverlay,
 			isOverlayClickClose: this.props.isOverlayClickClose,
+			onDismiss: this.props.onDismiss,
 			content: null,
 		};
 	}
@@ -235,6 +236,7 @@ export default class DialogBox extends Component{
 			return (
 				<TouchableWithoutFeedback onPress={() => {
 					if(this.state.isOverlayClickClose) {
+						this.state.onDismiss()
 						this.close();
 					}
 				}}>
