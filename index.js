@@ -236,7 +236,9 @@ export default class DialogBox extends Component{
 			return (
 				<TouchableWithoutFeedback onPress={() => {
 					if(this.state.isOverlayClickClose) {
-						this.state.onDismiss()
+						if (this.state.onDismiss) {
+							this.state.onDismiss()
+						}
 						this.close();
 					}
 				}}>
