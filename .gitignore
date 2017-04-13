@@ -1,2 +1,7 @@
-.npmignore
+npm-debug.log
 node_modules
+.settings
+.project
+.DS_Store
+.idea
+ 

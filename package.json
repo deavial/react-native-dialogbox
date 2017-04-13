@@ -1,8 +1,8 @@
 {
   "name": "react-native-dialogbox",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "dialog popup for react-native",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postpublish": "greenkeeper-postpublish"
@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/victoriafrench/react-native-dialogbox#readme",
   "peerDependencies": {
-    "react": "~15.4.2",
-    "react-native": "^0.41.2"
+    "react": ">= 15.2.1 < 15.6",
+    "react-native": ">= 0.30 < 0.44"
   },
   "devDependencies": {
     "greenkeeper-postpublish": "^1.0.1"

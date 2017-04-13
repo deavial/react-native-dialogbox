@@ -1,9 +1,12 @@
 [![npm version](https://img.shields.io/npm/v/react-native-dialogbox.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dialogbox)
 [![npm downloads](https://img.shields.io/npm/dm/react-native-dialogbox.svg?style=flat-square)](https://www.npmjs.com/package/react-native-dialogbox)
 [![Dependencies](https://david-dm.org/victoriafrench/react-native-dialogbox.svg)](https://david-dm.org/victoriafrench/react-native-dialogbox)
-[![React-Native](https://img.shields.io/badge/react--native-v0.41.2-green.svg)]()
+[![React-Native](https://img.shields.io/badge/react--native-v0.43.3-green.svg)]()
 [![platforms](https://img.shields.io/badge/platforms-ios%20%7C%20android-blue.svg)]()
 # react-native-dialogbox
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/victoriafrench/react-native-dialogbox.svg)](https://greenkeeper.io/)
+
 
 This is a custom component for React Native, a simple popup, compatible with ios and android.
 
@@ -42,6 +45,9 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			content: ['come on!', 'go!'],
 			btn: {
 				text: 'OKOK',
+				style: {
+					color: 'red'
+				},
 				callback: () => {
 					this.dialogbox.alert('over!');
 				},
@@ -70,12 +76,18 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			content: ['come on!', 'go!'],
 			ok: {
 				text: 'Y',
+				style: {
+					color: 'red'
+				},
 				callback: () => {
 					this.dialogbox.alert('Good!');
 				},
 			},
 			cancel: {
 				text: 'N',
+				style: {
+					color: 'blue'
+				},
 				callback: () => {
 					this.dialogbox.alert('Hurry up！');
 				},
@@ -97,7 +109,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import DialogBox from 'react-native-dialogbox';
 
-export default class App extends Component{
+export default class App extends Component {
 
 	handleOnPress = () => {
 		// alert
@@ -111,7 +123,7 @@ export default class App extends Component{
 				<Text style={styles.btn} onPress={this.handleOnPress}>click me !</Text>
 
 				{/** dialogbox component */}
-				<DialogBox ref={(dialogbox) => { this.dialogbox = dialogbox }}/>
+				<DialogBox ref={dialogbox => { this.dialogbox = dialogbox }}/>
 
 			</View>
 		);

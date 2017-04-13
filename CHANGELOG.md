@@ -2,6 +2,10 @@
 
 * Nothing Current.
 
+### 0.6.5 (April 13, 2017)
+* Updated React peer to 15.5.4
+* Updated React Native peer to 0.43.3
+
 ### 0.6.4 (February 9, 2017)
 * Updated React peer to 15.4.2
 * Updated React Native peer to 0.41.2
