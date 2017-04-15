@@ -15,6 +15,8 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ###Demo
 ![ui](./ui.gif)
 
+[![NPM](https://nodei.co/npm/react-native-dialogbox.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-dialogbox/)
+
 ###Props
 - <b>isOverlay</b> *bool* - *`default true`*
 - <b>isOverlayClickClose</b> *bool* - *`default true`*
