@@ -10,20 +10,20 @@
 
 This is a custom component for React Native, a simple popup, compatible with ios and android.
 
->This is a forked distro of react-native-popup that adds support for the current versions of react-native. The originating distro can be found [here](https://github.com/beefe/react-native-popup)
+>This is a forked distro of react-native-popup that adds support for the current versions of react-native, and adds additional features (style overrides, promise support). The originating distro can be found [here](https://github.com/beefe/react-native-popup)
 
-###Demo
+### Demo
 ![ui](./ui.gif)
 
 [![NPM](https://nodei.co/npm/react-native-dialogbox.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-dialogbox/)
 
-###Props
+### Props
 - <b>isOverlay</b> *bool* - *`default true`*
 - <b>isOverlayClickClose</b> *bool* - *`default true`*
 - <b>onDismiss</b> *function()* - *`optional callback called when overlay dismisses dialogbox`*
 - <b>style</b> *object* - *`optional override for system styles`*
 
-###Methods
+### Methods
 - <b>alert</b>(<b>`message`</b>: *string*|*number*, [...]) : *Promise*
 ```javascript
 	e.g.
@@ -224,14 +224,14 @@ This is a custom component for React Native, a simple popup, compatible with ios
 		});
 ```
 
-###Usage
-####Step 1 - install
+### Usage
+#### Step 1 - install
 
 ```
 	npm install react-native-dialogbox --save
 ```
 
-####Step 2 - import and use in project
+#### Step 2 - import and use in project
 
 ```javascript
 import React, { Component } from 'react';
