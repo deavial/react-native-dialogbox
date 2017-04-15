@@ -1,6 +1,9 @@
 ##ISC License (ISC)
 **REACT-NATIVE-DIALOGBOX**   
-Copyright (c) 2016, 2017 [Victoria French](https://github.com/victoriafrench) and Contributors  
+Copyright (c) 2016, 2017 [Victoria French](https://github.com/victoriafrench) and Contributors:
+
+Copyright (c) 2017 [Greg Berns](https://github.com/gregberns)
+
 Copyright (c) 2016 [Layton Whiteley](https://github.com/lwhiteley)  
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
