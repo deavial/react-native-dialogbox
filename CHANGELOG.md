@@ -2,6 +2,9 @@
 
 * Nothing Current.
 
+### 0.6.5 (April 14, 2017)
+* Updated React peer range (>=15.2.1 < 16.1.0)
+
 ### 0.6.5 (April 13, 2017)
 * Support for completely overriding internal styles using the style property
 * Support for overriding button text styles
