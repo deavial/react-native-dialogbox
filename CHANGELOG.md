@@ -2,6 +2,17 @@
 
 * Nothing Current.
 
+### 0.6.5 (April 14, 2017)
+* Updated React peer range (>=15.2.1 < 16.1.0)
+
+### 0.6.5 (April 13, 2017)
+* Support for completely overriding internal styles using the style property
+* Support for overriding button text styles
+* Support for changing button rendering direction via `buttonFlow` property
+* Methods now return a `Promise` to use instead of callbacks
+* Updated React peer range (>=15.2.1 <15.6.0)
+* Updated React Native peer range (>=0.30  <0.44)
+
 ### 0.6.4 (February 9, 2017)
 * Updated React peer to 15.4.2
 * Updated React Native peer to 0.41.2
