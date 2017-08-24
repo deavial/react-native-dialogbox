@@ -7,7 +7,6 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/victoriafrench/react-native-dialogbox.svg)](https://greenkeeper.io/)
 
-
 This is a custom component for React Native, a simple popup, compatible with ios and android.
 
 >This is a forked distro of react-native-popup that adds support for the current versions of react-native, and adds additional features (style overrides, promise support). The originating distro can be found [here](https://github.com/beefe/react-native-popup)
