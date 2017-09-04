@@ -39,6 +39,6 @@
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
-    "greenkeeper-postpublish": "^1.0.1"
+    "greenkeeper-postpublish": "^1.3.0"
   }
 }
