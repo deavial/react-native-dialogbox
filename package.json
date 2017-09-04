@@ -1,6 +1,6 @@
 {
   "name": "react-native-dialogbox",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "dialog popup for react-native",
   "main": "lib/index.js",
   "scripts": {
@@ -32,8 +32,11 @@
   },
   "homepage": "https://github.com/victoriafrench/react-native-dialogbox#readme",
   "peerDependencies": {
-    "react": ">= 15.2.1 < 16.1.0",
-    "react-native": ">= 0.30.0 < 0.44.0"
+    "react": "*",
+    "react-native": ">=0.30.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "greenkeeper-postpublish": "^1.0.1"
