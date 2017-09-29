@@ -1,6 +1,6 @@
 ### HEAD
 
-* Nothing Current.
+* removed greenkeeper post-publish as it is no longer supported.
 
 ### 0.6.8 (September 29, 2017)
 
