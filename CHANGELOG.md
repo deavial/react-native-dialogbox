@@ -2,12 +2,17 @@
 
 * Nothing Current.
 
-### 0.6.6 (September 4, 2017)
+### 0.6.8 (September 29, 2017)
+
+* Fixed issue with merging custom styles (thank you Royce Dy)
+* Updated PropTypes to version 15.6.0
+
+### 0.6.7 (September 4, 2017)
 
 * Updated React Native peer range to support 47.
 * Moved PropTypes to external `prop-types` package
 
-### 0.6.5 (April 14, 2017)
+### 0.6.6 (April 14, 2017)
 
 * Updated React peer range (>=15.2.1 < 16.1.0)
 
