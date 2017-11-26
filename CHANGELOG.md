@@ -1,7 +1,7 @@
 ### HEAD
 
-* removed greenkeeper post-publish as it is no longer supported.
-* updated react-native dependancy to include ^0.50.0
+* Removed greenkeeper post-publish as it is no longer supported.
+* Updated React Native peer range to support 50.
 
 ### 0.6.8 (September 29, 2017)
 
