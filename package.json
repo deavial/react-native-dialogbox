@@ -1,6 +1,6 @@
 {
   "name": "react-native-dialogbox",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "dialog popup for react-native",
   "main": "lib/index.js",
   "scripts": {
