@@ -1,7 +1,9 @@
 ### HEAD
 
+### 0.6.9 (February 19, 2018)
 * Removed greenkeeper post-publish as it is no longer supported.
-* Updated React Native peer range to support 50.
+* Updated React Native peer range to support 53.
+* React Native warnings on `PropTypes` resolved.
 
 ### 0.6.8 (September 29, 2017)
 
