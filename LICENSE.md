@@ -4,7 +4,8 @@ Copyright (c) 2016, 2017 [Victoria French](https://github.com/victoriafrench) an
 
 * [Greg Berns](https://github.com/gregberns)
 * [Layton Whiteley](https://github.com/lwhiteley)
-* [Royce Dy] (https://github.com/rad128)  
+* [Royce Dy](https://github.com/rad128)
+* [Laurent Cozic](https://github.com/laurent22)
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
