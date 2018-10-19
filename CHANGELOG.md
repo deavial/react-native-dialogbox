@@ -1,6 +1,13 @@
 ### HEAD
 
+### 0.6.10 (October 19, 2018)
+
+* Removed upper peer dependecy restriction on React Native (Supports 0.30 - 0.57)
+* Updated `prop-types` to 15.6.2
+* Updated `readme`
+
 ### 0.6.9 (February 19, 2018)
+
 * Removed greenkeeper post-publish as it is no longer supported.
 * Updated React Native peer range to support 53.
 * React Native warnings on `PropTypes` resolved.

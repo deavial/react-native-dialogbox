@@ -1,6 +1,6 @@
 {
   "name": "react-native-dialogbox",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "dialog popup for react-native",
   "main": "lib/index.js",
   "scripts": {
@@ -35,6 +35,6 @@
     "react-native": ">=0.30.0"
   },
   "dependencies": {
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.2"
   }
 }
