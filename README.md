@@ -27,44 +27,44 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ```javascript
 	e.g.
 
-		this.dialogbox.alert(1);
+		dialogbox.alert(1);
 
-		this.dialogbox.alert(1, 'two', '10 messages at most');
+		dialogbox.alert(1, 'two', '10 messages at most');
 
-		this.dialogbox.alert('promise example').then(() => this.dialogbox.alert('dismissed'));
+		dialogbox.alert('promise example').then(() => dialogbox.alert('dismissed'));
 
 ```
 - <b>tip</b>({ <b>`title`</b>: *string*, <b>`content`</b>: *string*|*number*|*array*<*string*|*number*> *`isRequired`*, <b>`btn`</b>: {<b>`title`</b>: *string* <b>*`default 'OK'`*</b>, <b>`style`</b>: *object*, <b>`callback`</b>: *function*}, }) : *Promise*
 ```javascript
 	e.g.
 
-		this.dialogbox.tip({
+		dialogbox.tip({
 			content: 'come on!',
 		});
 
-		this.dialogbox.tip({
+		dialogbox.tip({
 			title: 'TipTip',
 			content: 'come on!',
 		});
 
-		this.dialogbox.tip({
+		dialogbox.tip({
 			content: ['come on!', 'go!'],
 			btn: {
 				text: 'OKOK',
 				callback: () => {
-					this.dialogbox.alert('over!');
+					dialogbox.alert('over!');
 				},
 			},
 		});
 
-		this.dialogbox.tip({
+		dialogbox.tip({
 			content: 'promise example',
 			btn: {
 				text: 'done'
 			}
-		}).then(() => (this.dialogbox.alert('done')));
+		}).then(() => (dialogbox.alert('done')));
 
-		this.dialogbox.tip({
+		dialogbox.tip({
 			content: 'style example',
 			style: {
 				color: 'red';
@@ -76,11 +76,11 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ```javascript
 	e.g.
 
-		this.dialogbox.confirm({
+		dialogbox.confirm({
 			content: 'Are you ready?',
 		});
 
-		this.dialogbox.confirm({
+		dialogbox.confirm({
 			content: 'Are you ready?',
 			ok: {
 				callback: () => {
@@ -89,7 +89,7 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			},
 		});
 
-		this.dialogbox.confirm({
+		dialogbox.confirm({
 			title: 'title',
 			content: ['come on!', 'go!'],
 			ok: {
@@ -112,7 +112,7 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			},
 		});
 
-		this.dialogbox.confirm({
+		dialogbox.confirm({
 			title: 'title',
 			content: ['come on!', 'go!'],
 			ok: {
@@ -129,9 +129,9 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			},
 		}).then((event) => {
 			if (event.button) {
-				this.dialogbox.alert(`You selected ${event.button.text}`);
+				dialogbox.alert(`You selected ${event.button.text}`);
 			} else {
-				this.dialogbox.alert('Dialog cancelled');
+				dialogbox.alert('Dialog cancelled');
 			}
 		});
 ```
@@ -140,32 +140,32 @@ This is a custom component for React Native, a simple popup, compatible with ios
 ```javascript
 	e.g.
 
-		this.dialogbox.pop({
+		dialogbox.pop({
 			title: 'Animals',
 			content: 'Which animal do you like?',
 			btns: [
 				{
 					text: 'Frog',
 					callback: () => {
-						this.dialogbox.alert('Ribbit!');
+						dialogbox.alert('Ribbit!');
 					},
 				},
 				{
 					text: 'Dog',
 					callback: () => {
-						this.dialogbox.alert('Woof!');
+						dialogbox.alert('Woof!');
 					},
 				},
 				{
 					text: 'Cat',
 					callback: () => {
-						this.dialogbox.alert('Meow!');
+						dialogbox.alert('Meow!');
 					},
 				}
 			]
 		});
 
-		this.dialogbox.pop({
+		dialogbox.pop({
 			title: 'Animals',
 			content: 'Which animal do you like?',
 			btns: [
@@ -181,19 +181,19 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			]
 		}).then(event => {
 			if (event.button) {
-				this.dialogbox.alert([
+				dialogbox.alert([
 					`You selected ${event.button.text}`, 
 					`It was button index ${event.index}`
 				]);
 			} else {
-				this.dialogbox.alert([
+				dialogbox.alert([
 					'Dialog was dismissed without selection', 
 					'Index for this event is always -1'
 				]);
 			}
 		});
 
-		this.dialogbox.pop({
+		dialogbox.pop({
 			title: 'Animals with Stacked Buttons',
 			content: 'Which animal do you like?',
 			buttonFlow: 'column',
@@ -210,12 +210,12 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			]
 		}).then(event => {
 			if (event.button) {
-				this.dialogbox.alert([
+				dialogbox.alert([
 					`You selected ${event.button.text}`, 
 					`It was button index ${event.index}`
 				]);
 			} else {
-				this.dialogbox.alert([
+				dialogbox.alert([
 					'Dialog was dismissed without selection', 
 					'Index for this event is always -1'
 				]);
@@ -238,10 +238,14 @@ import { View, Text, StyleSheet } from 'react-native';
 import DialogBox from 'react-native-dialogbox';
 
 export default class App extends Component {
-
+        constructor(props) {
+	        super(props);
+		this.dialogbox = React.createRef();
+	}
+	
 	handleOnPress = () => {
 		// alert
-		this.dialogbox.alert(1);
+		this.dialogbox.current.alert(1);
 	},
 
 	render() {
@@ -251,7 +255,7 @@ export default class App extends Component {
 				<Text style={styles.btn} onPress={this.handleOnPress}>click me !</Text>
 
 				{/** dialogbox component */}
-				<DialogBox ref={dialogbox => { this.dialogbox = dialogbox }}/>
+				<DialogBox ref={this.dialogbox}/>
 
 			</View>
 		);
