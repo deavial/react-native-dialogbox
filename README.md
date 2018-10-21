@@ -84,7 +84,7 @@ This is a custom component for React Native, a simple popup, compatible with ios
 			content: 'Are you ready?',
 			ok: {
 				callback: () => {
-					this.dialogbox.alert('Very good!');
+					dialogbox.alert('Very good!');
 				},
 			},
 		});
@@ -98,7 +98,7 @@ This is a custom component for React Native, a simple popup, compatible with ios
 					color: 'red'
 				},
 				callback: () => {
-					this.dialogbox.alert('Good!');
+					dialogbox.alert('Good!');
 				},
 			},
 			cancel: {
@@ -107,7 +107,7 @@ This is a custom component for React Native, a simple popup, compatible with ios
 					color: 'blue'
 				},
 				callback: () => {
-					this.dialogbox.alert('Hurry up！');
+					dialogbox.alert('Hurry up！');
 				},
 			},
 		});
@@ -241,9 +241,10 @@ export default class App extends Component {
         constructor(props) {
 	        super(props);
 		this.dialogbox = React.createRef();
+		this.handleOnPress = this.handleOnPress.bind(this);
 	}
 	
-	handleOnPress = () => {
+	handleOnPress() {
 		// alert
 		this.dialogbox.current.alert(1);
 	},
