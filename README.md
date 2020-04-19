@@ -5,7 +5,7 @@
 [![platforms](https://img.shields.io/badge/platforms-ios%20%7C%20android-blue.svg)]()
 # react-native-dialogbox
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/victoriafrench/react-native-dialogbox.svg)](https://greenkeeper.io/)
+
 
 This is a custom component for React Native, a simple popup, compatible with ios and android.
 
